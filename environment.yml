@@ -1,0 +1,7 @@
+name: wind-forecasting-py
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - requests
+  - numpy
