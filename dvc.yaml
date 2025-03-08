@@ -8,11 +8,12 @@ stages:
           cache: false
           persist: true
   get-smarteole-data:
-    cmd: calkit xenv -n py -- python examples/download_flasc_data.py
+    cmd: calkit xenv -n py --wdir examples
+      -- python download_flasc_data.py
     deps:
       - examples/download_flasc_data.py
       - environment.yml
     outs:
-      - inputs/SMARTEOLE-WFC-open-dataset:
+      - examples/inputs/SMARTEOLE-WFC-open-dataset:
           cache: false
           persist: true

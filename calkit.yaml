@@ -1,4 +1,22 @@
+name: wind-forecasting
+owner: achenry
+title: >
+  Ultra-Short-Term Probabilistic Spatio-Temporal Modeling of Wind Farm Dynamics
+  and Disturbances for Wake Steering Control
 environments:
   py:
     path: environment.yml
     kind: conda
+  cuda:
+    path: install_scripts/wind_forecasting_cuda.yaml
+    kind: conda
+  rocm:
+    path: install_scripts/wind_forecasting_rocm.yaml
+    kind: conda
+pipeline:
+  path: dvc.yaml
+  kind: dvc
+datasets:
+  - path: inputs/SMARTEOLE-WFC-open-dataset
+    imported_from:
+      url: https://doi.org/10.5281/zenodo.7342466

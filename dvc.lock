@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   get-smarteole-data:
-    cmd: calkit xenv -n py -- python examples/download_flasc_data.py
+    cmd: calkit xenv -n py --wdir examples -- python download_flasc_data.py
     deps:
     - path: environment.yml
       hash: md5
@@ -12,7 +12,7 @@ stages:
       md5: b32c6407763065a089ae6f336f3ac74b
       size: 1559
     outs:
-    - path: inputs/SMARTEOLE-WFC-open-dataset
+    - path: examples/inputs/SMARTEOLE-WFC-open-dataset
       hash: md5
       md5: 1e2a5737103434165f1f10a0f108405b.dir
       size: 438232953
