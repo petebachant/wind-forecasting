@@ -4,9 +4,6 @@
 [submodule "wind_forecasting/preprocessing/OpenOA"]
 	path = wind_forecasting/preprocessing/OpenOA
 	url = https://github.com/achenry/OpenOA.git
-[submodule "openoa_polars"]
-	path = wind_forecasting/preprocessing/OpenOA
-	url = https://github.com/achenry/OpenOA
 [submodule "wind_forecasting/models/pytorch_transformer_ts"]
 	path = wind_forecasting/models/pytorch_transformer_ts
 	url = https://github.com/boujuan/pytorch-transformer-ts
