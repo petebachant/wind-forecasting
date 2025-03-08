@@ -3,7 +3,7 @@
 	url = https://github.com/achenry/spacetimeformer.git
 [submodule "wind_forecasting/preprocessing/OpenOA"]
 	path = wind_forecasting/preprocessing/OpenOA
-	url = https://github.com/achenry/OpenOA/tree/main
+	url = https://github.com/achenry/OpenOA.git
 [submodule "openoa_polars"]
 	path = wind_forecasting/preprocessing/OpenOA
 	url = https://github.com/achenry/OpenOA
