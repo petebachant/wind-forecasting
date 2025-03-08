@@ -59,3 +59,5 @@ examples/data/*
 
 wind_forecasting/preprocessing/.ipynb_checkpoints/
 *.sh.vscode/launch.json
+
+inputs
