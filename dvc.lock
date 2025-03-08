@@ -3,6 +3,10 @@ stages:
   get-smarteole-data:
     cmd: calkit xenv -n py -- python examples/download_flasc_data.py
     deps:
+    - path: environment.yml
+      hash: md5
+      md5: 60d0dab2a758e6c6af3cda02fcd9bf32
+      size: 115
     - path: examples/download_flasc_data.py
       hash: md5
       md5: b32c6407763065a089ae6f336f3ac74b
@@ -13,3 +17,15 @@ stages:
       md5: 1e2a5737103434165f1f10a0f108405b.dir
       size: 438232953
       nfiles: 9
+  setup-nbstripout:
+    cmd: calkit xenv -n py -- nbstripout --install --attributes .gitattributes
+    deps:
+    - path: environment.yml
+      hash: md5
+      md5: 60d0dab2a758e6c6af3cda02fcd9bf32
+      size: 115
+    outs:
+    - path: .gitattributes
+      hash: md5
+      md5: 861b7e863668762e7ed87dbe5d78dd72
+      size: 70

@@ -1,8 +1,17 @@
 stages:
+  setup-nbstripout:
+    cmd: calkit xenv -n py -- nbstripout --install --attributes .gitattributes
+    deps:
+      - environment.yml
+    outs:
+      - .gitattributes:
+          cache: false
+          persist: true
   get-smarteole-data:
     cmd: calkit xenv -n py -- python examples/download_flasc_data.py
     deps:
       - examples/download_flasc_data.py
+      - environment.yml
     outs:
       - inputs/SMARTEOLE-WFC-open-dataset:
           cache: false
